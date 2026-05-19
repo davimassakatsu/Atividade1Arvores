@@ -3,7 +3,6 @@ public class Main {
 
         ArvoreBinaria arvore = new ArvoreBinaria();
 
-        // Mesma inserção do repositório
         arvore.inserir(0);
         arvore.inserir(-3);
         arvore.inserir(-5);
@@ -18,26 +17,26 @@ public class Main {
         System.out.println("\n=== Árvore original ===");
         arvore.exibir("Em");
 
-        // ---- CASO 1: Remoção de nó FOLHA (-4) ----
+        // ---- caso 1 - nó folha ----
         System.out.println("\n--- Removendo nó FOLHA: -4 ---");
         arvore.remover(-4);
         arvore.exibir("Em");
 
-        // ---- CASO 2: Remoção de nó com UM FILHO (-3 tem apenas filho esquerdo -5) ----
+        // ---- caso 2 - apenas 1 filho ----
         System.out.println("\n--- Removendo nó com 1 FILHO: -3 ---");
         arvore.remover(-3);
         arvore.exibir("Em");
 
-        // ---- CASO 3: Remoção de nó com DOIS FILHOS (5 tem esquerda=3 e direita=10) ----
+        // ---- caso 3 - nó com 2 filhos ----
         System.out.println("\n--- Removendo nó com 2 FILHOS: 5 ---");
         arvore.remover(5);
         arvore.exibir("Em");
 
-        // ---- Caso extra: valor inexistente ----
+        // ---- caso a mais - valor inexistente ----
         System.out.println("\n--- Tentando remover valor inexistente: 99 ---");
         arvore.remover(99);
 
-        // ---- Percursos finais ----
+        // ---- percursos finais ----
         System.out.println("\n=== Estado final da árvore ===");
         arvore.exibir("Pre");
         arvore.exibir("Em");
